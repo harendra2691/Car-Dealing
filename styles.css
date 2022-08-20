@@ -252,6 +252,10 @@ footer {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 0.06px;
+ 
+}
+h5>a{
+  text-decoration: none;
   color: #ffffff;
 }
 /* .wrapper>h5::after{
