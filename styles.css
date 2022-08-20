@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-  padding: 35px 80px;
+  padding: 30px 80px;
   display: flow-root;
 }
 
@@ -150,7 +150,7 @@ article {
 .deal:nth-child(4n) {
   margin-right: 0;
 }
-.deal:nth-last-child(-n+4){
+.deal:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
 /* .deal:nth-last-child(-n + 4) {
@@ -218,20 +218,20 @@ article {
   white-space: nowrap;
 }
 
-.signup{
+.signup {
   position: relative;
   background-image: url("bottom-background.png");
   min-height: 348px;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.signup>article{
+.signup > article {
   top: 40%;
 }
-.email{
+.email {
   min-width: 300px;
 }
-.signup__heading{
+.signup__heading {
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
   font-size: 40px;
   font-weight: 600;
@@ -239,13 +239,13 @@ article {
   color: #ffffff;
 }
 
-.signup__text{
-margin-bottom: 41px;
+.signup__text {
+  margin-bottom: 41px;
 }
-footer{
+footer {
   background-color: #342c2c;
 }
-.wrapper>h5{
+.wrapper > h5 {
   float: left;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   font-family: Rubik;
@@ -258,30 +258,26 @@ footer{
   clear: both;
 } */
 
-ul{
+ul {
   list-style: none;
   float: right;
   font-size: 0;
   /* vertical-align: middle; */
 }
-ul>li{
+ul > li {
   display: inline-block;
   font-size: 16px;
   letter-spacing: 0.05px;
-  color: #ffffff;
   margin-right: 17px;
 }
-ul>li:nth-child(3){
+ul > li:nth-child(3) {
   margin-right: 0;
 }
 
-
-
-
-
-
-
-
+li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* .deals__container {
@@ -299,7 +295,6 @@ ul>li:nth-child(3){
     padding: 0 36px;
   }
   .tip {
-
     width: 300px;
     height: 200px;
   }
@@ -312,5 +307,4 @@ ul>li:nth-child(3){
     left: 50%;
     font-size: 20px;
   }
-  
 }
