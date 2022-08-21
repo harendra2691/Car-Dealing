@@ -19,10 +19,10 @@
   <body>
     <header class="header">
       <div class="wrapper">
-        <a href="" class="logo"
+        <a href="" class="header__logo"
           ><img
             src="dreamCars-logo.png"
-            class="dc-logo"
+            class="header__dc-logo"
             width="126px"
             height="28px"
         /></a>
@@ -31,23 +31,19 @@
     <main>
       <section class="hero">
         <article>
-          <h1 class="hero-heading">Find Your Dream Car</h1>
-          <p class="hero-txt title-sm">
+          <h1 class="hero__head">Find Your Dream Car</h1>
+          <p class="hero__txt title-sm">
             Search over 20,000 pre-approved used cars and find your<br />perfect
             vehicle today
           </p>
-          <form class="hero__input">
+          <form class="form">
             <input
               type="text"
-              class="input hero__input--left"
+              class="form__input form__input_margin"
               placeholder="Search make or model"
             />
-            <input
-              type="text"
-              class="input hero__input--right"
-              placeholder="Postcode"
-            />
-            <a class="input hero__submit"><span>Find My Car</span></a>
+            <input type="text" class="form__input" placeholder="Postcode" />
+            <a class="form__button"><span>Find My Car</span></a>
           </form>
         </article>
       </section>
@@ -55,48 +51,69 @@
       <section class="deals">
         <div class="container">
           <h2 class="deals__heading title-lg">Today's Hottests Deals</h2>
-          <p class="title-sm deals__text">
+          <p class="deals__text title-sm">
             Check out the most popular cars in stock today
           </p>
-          <div class="deals__container">
-            
-            <div class="deal">
-              
-              <img src="car.png" title="ford-car" alt="car" />
-              <h4 class="car-name">Ford Focus</h4>
-            
-            </div>
-          
-            <div class="deal">
-              <img src="car.png" title="skoda-car" alt="car" />
-              <h4 class="car-name">Skoda Fabia</h4>
-            </div>
-            <div class="deal">
-              <img src="car.png" title="honda-car" alt="car" />
-              <h4 class="car-name">Honda Civic</h4>
-            </div>
-            <div class="deal">
-              <img src="car.png" title="vauxhall-car" alt="car" />
-              <h4 class="car-name">Vauxhall Corsa</h4>
-            </div>
-            <div class="deal">
-              <img src="car.png" title="renault-car" alt="car" />
-              <h4 class="car-name">Renault Clio</h4>
-            </div>
-            <div class="deal">
-              <img src="car.png" title="volkswagen-car" alt="car" />
-              <h4 class="car-name">Volkswagen Polo</h4>
-            </div>
-            <div class="deal">
-              <img src="car.png" title="seat-car" alt="car" />
-              <h4 class="car-name">Seat Ibiza</h4>
-            </div>
-            <div class="deal">
-              <img src="car.png" title="bmw-car" alt="car" />
-              <h4 class="car-name">BMW i5</h4>
-            </div>
+          <div class="deals-container">
+            <a href="" class="deal">
+              <img src="car.png" title="ford-car" alt="car" class="deal__img" />
+              <h4 class="deal__name">Ford Focus</h4>
+            </a>
+            <a href="" class="deal">
+              <img
+                src="car.png"
+                title="skoda-car"
+                alt="car"
+                class="deal__img"
+              />
+              <h4 class="deal__name">Skoda Fabia</h4>
+            </a>
+            <a href="" class="deal">
+              <img
+                src="car.png"
+                title="honda-car"
+                alt="car"
+                class="deal__img"
+              />
+              <h4 class="deal__name">Honda Civic</h4>
+            </a>
+            <a href="" class="deal">
+              <img
+                src="car.png"
+                title="vauxhall-car"
+                alt="car"
+                class="deal__img"
+              />
+              <h4 class="deal__name">Vauxhall Corsa</h4>
+            </a>
+            <a href="" class="deal">
+              <img
+                src="car.png"
+                title="renault-car"
+                alt="car"
+                class="deal__img"
+              />
+              <h4 class="deal__name">Renault Clio</h4>
+            </a>
+            <a href="" class="deal">
+              <img
+                src="car.png"
+                title="volkswagen-car"
+                alt="car"
+                class="deal__img"
+              />
+              <h4 class="deal__name">Volkswagen Polo</h4>
+            </a>
+            <a href="" class="deal">
+              <img src="car.png" title="seat-car" alt="car" class="deal__img" />
+              <h4 class="deal__name">Seat Ibiza</h4>
+            </a>
+            <a href="" class="deal">
+              <img src="car.png" title="bmw-car" alt="car" class="deal__img" />
+              <h4 class="deal__name">BMW i5</h4>
+            </a>
           </div>
-          <a href="" class="deals__more"><span>VIEW ALL TODAY'S DEALS</span></a>
+          <a href="" class="more"><span>VIEW ALL TODAY'S DEALS</span></a>
         </div>
       </section>
       <section class="tips">
@@ -105,66 +122,50 @@
           <p class="title-sm tips__text">
             Make sure you make the right choice picking a car
           </p>
-          <div class="tips__container">
-            <div class="tip">
-              <img
-                src="check-list.png"
-                alt="check-list"
-                title="check-list"
-                width="100%"
-                height="100%"
-              />
-              <h4>Our Buyers Check List</h4>
-            </div>
-            <div class="tip">
-              <img
-                src="spot-fraud.png"
-                alt="check-list"
-                title="check-list"
-                width="100%"
-                height="100%"
-              />
-              <h4>How To Spot Fraud</h4>
-            </div>
-            <div class="tip">
-              <img
-                src="used-cars.png"
-                alt="check-list"
-                title="check-list"
-                width="100%"
-                height="100%"
-              />
-              <h4>Best Used Cars 2018</h4>
-            </div>
+          <div class="tips-container">
+            <a href="" class="tip">
+              <img src="check-list.png" alt="check-list" title="check-list" />
+              <h4 class="tip__text">Our Buyers Check List</h4>
+            </a>
+            <a href="" class="tip">
+              <img src="spot-fraud.png" alt="check-list" title="check-list" />
+              <h4 class="tip__text">How To Spot Fraud</h4>
+            </a>
+            <a href="" class="tip">
+              <img src="used-cars.png" alt="check-list" title="check-list" />
+              <h4 class="tip__text">Best Used Cars 2018</h4>
+            </a>
           </div>
-          <a href="" class="deals__more"><span>SEE ALL OUR GUIDES</span></a>
+          <a href="" class="more"><span>SEE ALL OUR GUIDES</span></a>
         </div>
       </section>
       <section class="signup">
         <article>
-          <h3 class="signup__heading">Never Miss A Message</h3>
+          <h3 class="signup__head">Never Miss A Message</h3>
           <p class="signup__text title-sm">
             Join our exclusive list for one off deals and more
           </p>
-          <form class="hero__input">
+          <form class="form">
             <input
-              type="text"
-              class="input email"
+              type="email"
+              class="form__input form__input_email"
               placeholder="Enter your email address.."
             />
 
-            <a class="input hero__submit"><span>Sign Me Up</span></a>
+            <a class="form__button"><span>Sign Me Up</span></a>
           </form>
         </article>
       </section>
     </main>
     <footer class="footer">
       <div class="wrapper">
-        <h5><a href="">DreamCars</a></h5>
-        <ul>
-          <li><a href="">Search Cars</a></li>
-          <li><a href="">Buyer Tips</a></li>
-          <li><a href="">Finance</a></li>
+        <h5 class="footer__logo">
+          <a href="" class="footer__link">DreamCars</a>
+        </h5>
+        <ul class="list-container">
+          <li class="list"><a href="" class="list__link">Search Cars</a></li>
+          <li class="list"><a href="" class="list__link">Buyer Tips</a></li>
+          <li class="list"><a href="" class="list__link">Finance</a></li>
         </ul>
       </div>
     </footer>

@@ -18,10 +18,10 @@ body {
   display: flow-root;
 }
 
-.logo {
+.header__logo {
   display: inline-block;
 }
-.dc-logo {
+.header__dc-logo {
   display: block;
   object-fit: cover;
 }
@@ -50,14 +50,14 @@ article {
   text-align: center;
 }
 
-.hero-heading {
+.hero__head {
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   font-size: 54px;
   font-weight: 600;
   letter-spacing: 1.12px;
   color: white;
 }
-.hero-txt {
+.hero__txt {
   color: white;
   margin-bottom: 22px;
 }
@@ -70,11 +70,12 @@ article {
   text-align: center;
 }
 
-.hero__input {
+.form {
   font-size: 0px;
-  max-width: 580px;
+  max-width: 550px;
+  margin: 0 auto;
 }
-.input {
+.form__input {
   padding: 18px 19px 18px 19px;
   border: none;
   font-size: 13px;
@@ -83,16 +84,20 @@ article {
   outline: none;
 }
 
-.hero__input--left {
+.form__input_margin {
   margin-right: 1px;
 }
 
-.hero__submit {
+.form__button {
   display: inline-block;
   padding: 16px 25px 15px 34px;
   background-color: #342c2c;
   color: white;
   cursor: pointer;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 0.05px;
+  outline: none;
 }
 
 .deals {
@@ -110,10 +115,15 @@ article {
   margin-bottom: 16px;
 }
 
-.deals__container {
+.deals-container {
   display: flow-root;
-  padding: 0 6px;
+  /* padding: 0 14px; */
+  max-width: 1210px;
+  margin: 0 auto;
   margin-bottom: 48px;
+}
+.deals-container > a {
+  display: inline-block;
 }
 
 .deals__text {
@@ -126,11 +136,17 @@ article {
   border-radius: 4px;
   width: 299px;
   height: 237px;
+  margin-left: -4px;
   text-align: center;
   margin-right: 10px;
   margin-bottom: 32px;
+  text-decoration: none;
+  transition: transform 0.5s ease;
 }
-.deal > img {
+.deal:hover {
+  transform: scale(1.1);
+}
+.deal__img {
   background-color: rgba(227, 227, 227, 0.73);
   padding: 20px 21px 20px 39px;
   object-fit: cover;
@@ -138,7 +154,7 @@ article {
   margin-bottom: 7px;
   width: 100%;
 }
-.car-name {
+.deal__name {
   opacity: 0.8;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   font-size: 24px;
@@ -153,9 +169,6 @@ article {
 .deal:nth-last-child(-n + 4) {
   margin-bottom: 0;
 }
-/* .deal:nth-last-child(-n + 4) {
-  margin-bottom: 0;
-}  */
 
 /* .deal:not(:nth-child(4n)) {
   margin-right: 10px;
@@ -164,8 +177,7 @@ article {
   margin-bottom: 32px;
 } */
 
-.deals__more {
-  /* text-align: center; */
+.more {
   display: block;
   max-width: 228px;
   margin: 0 auto;
@@ -188,9 +200,11 @@ article {
   color: #696969;
   margin-bottom: 51px;
 }
-.tips__container {
+.tips-container {
   display: flow-root;
-  padding: 0 9px;
+  /* padding: 0 9px; */
+  max-width: 1220px;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
 
@@ -199,12 +213,17 @@ article {
   position: relative;
   width: 400px;
   height: 200px;
+  transition: transform 0.5s ease;
 }
+.tip:hover {
+  transform: scale(1.1);
+}
+
 .tip:not(:nth-child(3n)) {
   margin-right: 10px;
 }
 
-.tip > h4 {
+.tip__text {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -228,10 +247,10 @@ article {
 .signup > article {
   top: 40%;
 }
-.email {
-  min-width: 300px;
+.form__input_email {
+  min-width: 348px;
 }
-.signup__heading {
+.signup__head {
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
   font-size: 40px;
   font-weight: 600;
@@ -245,16 +264,15 @@ article {
 footer {
   background-color: #342c2c;
 }
-.wrapper > h5 {
+.footer__logo {
   float: left;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   font-family: Rubik;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 0.06px;
- 
 }
-h5>a{
+.footer__link {
   text-decoration: none;
   color: #ffffff;
 }
@@ -262,53 +280,160 @@ h5>a{
   clear: both;
 } */
 
-ul {
+.list-container {
   list-style: none;
   float: right;
   font-size: 0;
   /* vertical-align: middle; */
 }
-ul > li {
+.list {
   display: inline-block;
   font-size: 16px;
   letter-spacing: 0.05px;
   margin-right: 17px;
 }
-ul > li:nth-child(3) {
+.list:nth-child(3) {
   margin-right: 0;
 }
 
-li > a {
+.list__link {
   text-decoration: none;
   color: #ffffff;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* .deals__container {
-    max-width: 940px;
-    margin: 0 auto;
-    margin-bottom: 48px;
+  .wrapper {
+    padding: 20px 40px;
   }
-  .deal:not(:nth-last-child(-n + 3)) {
+  .hero__head {
+    font-size: 47px;
+  }
+  .hero__txt {
+    font-size: 17px;
+  }
+  .deals-container {
+    max-width: 915px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .deals {
+    padding: 50px 0;
+  }
+  .deal:nth-child(4n) {
+    margin-right: 10px;
+  }
+  .deal:nth-child(3n) {
+    margin-right: 0;
+  }
+  .deal:nth-last-child(-n + 4) {
+    margin-bottom: 32px;
+  }
+  .deal:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+  .deal__name {
+    font-size: 20px;
+  }
+  .form__input {
+    font-size: 12px;
+  }
+  /* .deal:not(:nth-last-child(-n + 3)) {
     margin-bottom: 32px;
   }
   .deal:not(:nth-child(3n)) {
     margin-right: 10px;
   } */
-  .tips__container {
-    padding: 0 36px;
+  .tips {
+    padding-bottom: 50px;
+  }
+  .tips-container {
+    max-width: 920px;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
   .tip {
     width: 300px;
-    height: 200px;
+    height: 150px;
   }
   .tip > img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
-  .tip > h4 {
-    top: 80%;
-    left: 50%;
+  .tip__text {
+    top: 75%;
     font-size: 20px;
+  }
+  .footer__logo {
+    font-size: 18px;
+  }
+  .list {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-device-width: 425px) and (max-device-width: 768px) {
+  .wrapper {
+    padding: 15px 20px;
+  }
+  .hero__head {
+    font-size: 35px;
+  }
+  .hero__txt {
+    font-size: 13px;
+  }
+  .form__input {
+    font-size: 8px;
+  }
+  .form__button {
+    font-size: 9px;
+  }
+  .deals-container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .deal:nth-child(3n) {
+    margin-right: 10px;
+  }
+  .deal:nth-child(2n) {
+    margin-right: 0px;
+  }
+  .deal__name {
+    font-size: 15px;
+  }
+  .more {
+    padding: 15px 20px;
+    font-size: 10px;
+  }
+  .tips-container {
+    max-width: 734px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .tip {
+    width: 238px;
+  }
+  .tip > img {
+    object-fit: contain;
+  }
+  .tip__text {
+    font-size: 15px;
+    top: 65%;
+  }
+  .form__input_email {
+    min-width: 274px;
+  }
+  .signup__head {
+    font-size: 34px;
+  }
+  .signup__text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .footer__logo {
+    font-size: 14px;
+  }
+  .list {
+    font-size: 12px;
   }
 }
