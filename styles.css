@@ -306,8 +306,8 @@ footer {
     font-size: 17px;
   }
   .deals-container {
-    max-width: 915px;
-    margin: 0 auto;
+    /* max-width: 915px;
+    margin: 0 auto; */
     margin-bottom: 30px;
   }
   .deals {
@@ -328,8 +328,8 @@ footer {
     padding-bottom: 50px;
   }
   .tips-container {
-    max-width: 920px;
-    margin: 0 auto;
+    /* max-width: 920px;
+    margin: 0 auto; */
     margin-bottom: 30px;
   }
   .tip {
@@ -368,8 +368,8 @@ footer {
     font-size: 9px;
   }
   .deals-container {
-    max-width: 600px;
-    margin: 0 auto;
+    /* max-width: 600px;
+    margin: 0 auto; */
     margin-bottom: 20px;
   }
   .deal {
@@ -385,8 +385,8 @@ footer {
     font-size: 10px;
   }
   .tips-container {
-    max-width: 734px;
-    margin: 0 auto;
+    /* max-width: 734px;
+    margin: 0 auto; */
     margin-bottom: 20px;
   }
   .tip {
