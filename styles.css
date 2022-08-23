@@ -193,6 +193,7 @@ button,
   margin-bottom: 51px;
 }
 .tips-container {
+  position: relative;
   display: flow-root;
   margin-bottom: 50px;
 }
