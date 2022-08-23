@@ -88,12 +88,13 @@ input {
 .form__input_margin {
   margin-right: 1px;
 }
-button {
+button, .button {
+  display: inline-block;
   cursor: pointer;
   border: none;
 }
 .form__button {
-  display: inline-block;
+  /* display: inline-block; */
   padding: 16px 25px 15px 34px;
   background-color: #342c2c;
   font-size: 13px;
