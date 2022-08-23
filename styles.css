@@ -6,7 +6,16 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+input {
+  border: none;
+}
 .header {
   position: absolute;
   width: 100%;
@@ -14,10 +23,26 @@ body {
 }
 
 .wrapper {
-  padding: 30px 80px;
+  padding: 2% 2%;
   display: flow-root;
 }
-
+.title-lg {
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: 1.12px;
+  color: white;
+}
+.title-sm {
+  opacity: 0.8;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  font-size: 30px;
+  letter-spacing: 0.06px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
 .header__logo {
   display: inline-block;
 }
@@ -29,8 +54,6 @@ body {
   position: relative;
   background-image: url("background.png");
   min-height: 700px;
-  /* height: 100vh;
-  max-height: 700px; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 100%;
@@ -49,18 +72,6 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.title-lg {
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  font-size: 54px;
-  font-weight: 600;
-  letter-spacing: 1.12px;
-  color: white;
-}
-.hero__txt {
-  color: white !important;
-  margin-bottom: 22px;
-}
 .text-sm {
   opacity: 0.9;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
@@ -70,14 +81,17 @@ body {
   text-align: center;
 }
 
+.hero__txt {
+  color: white;
+  margin-bottom: 22px;
+}
+
 .form {
   font-size: 0px;
   max-width: 550px;
   margin: 0 auto;
 }
-input {
-  border: none;
-}
+
 .form__input {
   padding: 18px 19px 18px 19px;
   font-size: 13px;
@@ -88,17 +102,18 @@ input {
 .form__input_margin {
   margin-right: 1px;
 }
-button, .button {
+button,
+.button {
   display: inline-block;
   cursor: pointer;
   border: none;
 }
 .form__button {
-  /* display: inline-block; */
   padding: 16px 25px 15px 34px;
   background-color: #342c2c;
   font-size: 13px;
   letter-spacing: 0.05px;
+  color: #ffffff;
 }
 .signup__form_button {
   padding: 18px 25px 18px 34px;
@@ -109,22 +124,8 @@ button, .button {
   padding: 80px 0;
 }
 
-.title-sm {
-  opacity: 0.8;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-  font-size: 30px;
-  letter-spacing: 0.06px;
-  text-align: center;
-  color: #000;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
 .deals-container {
   display: flow-root;
-  /* padding: 0 14px; */
-  max-width: 1220px;
-  margin: 0 auto;
   margin-bottom: 48px;
 }
 
@@ -132,21 +133,12 @@ button, .button {
   margin-bottom: 64px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-
 .deal {
   float: left;
-  width: calc(100% / 4 - 16px);
-  /* width: 23%; */
+  width: calc((100% - 60px) / 4);
   height: auto;
-  text-align: center;
-  margin-right: 21px;
+  margin-right: 20px;
   margin-bottom: 32px;
-  /* transition: transform 0.5s ease; */
 }
 
 /* .deal:hover {
@@ -202,21 +194,16 @@ a {
 }
 .tips-container {
   display: flow-root;
-  /* padding: 0 9px; */
-  max-width: 1235px;
-  margin: 0 auto;
   margin-bottom: 50px;
 }
 
 .tip {
   float: left;
   position: relative;
-  width: calc(100% / 3 - 9px);
-  /* width: 33%; */
+  width: calc((100% - 41px) / 3);
   height: auto;
-  margin-right: 6px;
+  margin-right: 20px;
   margin-bottom: 10px;
-  /* transition: transform 0.5s ease; */
 }
 
 /* .tip:hover {
@@ -233,6 +220,7 @@ a {
 
 .tip > img {
   display: block;
+  width: 100%;
 }
 .tip__text {
   position: absolute;
@@ -245,10 +233,10 @@ a {
   letter-spacing: 0.05px;
   text-align: center;
   white-space: nowrap;
+  color: #fff;
 }
 
 .signup {
-  /* position: relative; */
   background-image: url("bottom-background.png");
   min-height: 348px;
   background-repeat: no-repeat;
@@ -268,7 +256,6 @@ a {
   font-weight: 600;
   letter-spacing: 0.09px;
   color: #ffffff;
-  /* text-align: center; */
 }
 
 .signup__text {
@@ -286,9 +273,8 @@ footer {
   font-weight: bold;
   letter-spacing: 0.06px;
 }
-
-ul {
-  list-style: none;
+.footer__link {
+  color: #ffffff;
 }
 
 .links {
@@ -430,16 +416,25 @@ ul {
   }
 }
 
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-.hero{
-  /* min-height: 500px; */
-  min-width: 666px;
-}
-.signup{
-  min-width: 666px;
-}
-.wrapper{
-  min-width: 666px;
-}
+  .hero {
+    /* min-height: 500px; */
+    min-width: 666px;
+  }
+  .wrapper {
+    padding: 3% 3%;
+  }
+
+  .tip {
+    float: none;
+  }
+  .tip > img {
+    width: 100%;
+  }
+  .signup {
+    min-width: 666px;
+  }
+  .footer {
+    min-width: 666px;
+  }
 }
