@@ -42,7 +42,7 @@ body {
   max-width: 1270px;
 }
 
-article {
+.hero > article {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -50,7 +50,7 @@ article {
   text-align: center;
 }
 
-.hero__head {
+.title-lg {
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   font-size: 54px;
   font-weight: 600;
@@ -58,15 +58,15 @@ article {
   color: white;
 }
 .hero__txt {
-  color: white;
+  color: white !important;
   margin-bottom: 22px;
 }
-.title-sm {
+.text-sm {
   opacity: 0.9;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
   font-size: 20px;
   font-weight: 500;
-  color: white;
+  color: #696969;
   text-align: center;
 }
 
@@ -75,36 +75,40 @@ article {
   max-width: 550px;
   margin: 0 auto;
 }
+input {
+  border: none;
+}
 .form__input {
   padding: 18px 19px 18px 19px;
-  border: none;
   font-size: 13px;
   letter-spacing: 0.05px;
   color: #757575;
-  outline: none;
 }
 
 .form__input_margin {
   margin-right: 1px;
 }
-
+button {
+  cursor: pointer;
+  border: none;
+}
 .form__button {
   display: inline-block;
   padding: 16px 25px 15px 34px;
   background-color: #342c2c;
-  color: white;
-  cursor: pointer;
-  border: none;
   font-size: 13px;
   letter-spacing: 0.05px;
-  outline: none;
+}
+.signup__form_button {
+  padding: 18px 25px 18px 34px;
+  color: #ffffff;
 }
 
 .deals {
   padding: 80px 0;
 }
 
-.title-lg {
+.title-sm {
   opacity: 0.8;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
   font-size: 30px;
@@ -118,31 +122,36 @@ article {
 .deals-container {
   display: flow-root;
   /* padding: 0 14px; */
-  max-width: 1210px;
+  max-width: 1220px;
   margin: 0 auto;
   margin-bottom: 48px;
 }
 
 .deals__text {
   margin-bottom: 64px;
-  color: #696969;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 .deal {
   float: left;
-  border-radius: 4px;
-  width: 24%;
+  width: calc(100% / 4 - 16px);
+  /* width: 23%; */
   height: auto;
-  margin-left: -4px;
   text-align: center;
   margin-right: 21px;
   margin-bottom: 32px;
-  text-decoration: none;
-  transition: transform 0.5s ease;
+  /* transition: transform 0.5s ease; */
 }
-.deal:hover {
+
+/* .deal:hover {
   transform: scale(1.1);
-}
+} */
+
 .deal__img {
   background-color: rgba(227, 227, 227, 0.73);
   padding: 20px 21px 20px 39px;
@@ -150,6 +159,7 @@ article {
   display: block;
   margin-bottom: 7px;
   width: 100%;
+  border-radius: 10px;
 }
 .deal__name {
   opacity: 0.8;
@@ -163,16 +173,10 @@ article {
 .deal:nth-child(4n) {
   margin-right: 0;
 }
-.deal:nth-last-child(-n + 4) {
+.deal:nth-child(4n + 1):nth-last-child(-n + 4),
+.deal:nth-child(4n + 1):nth-last-child(-n + 4) ~ .deal {
   margin-bottom: 0;
 }
-
-/* .deal:not(:nth-child(4n)) {
-  margin-right: 10px;
-}
-.deal:not(:nth-last-child(-n + 4)) {
-  margin-bottom: 32px;
-} */
 
 .more {
   display: block;
@@ -184,7 +188,6 @@ article {
   text-align: center;
   color: #ffffff;
   background-color: #ffa500;
-  text-decoration: none;
   box-shadow: 0 20px 40px 0 #1a171730;
   padding: 20px 23px;
 }
@@ -194,13 +197,12 @@ article {
 }
 
 .tips__text {
-  color: #696969;
   margin-bottom: 51px;
 }
 .tips-container {
   display: flow-root;
   /* padding: 0 9px; */
-  max-width: 1220px;
+  max-width: 1235px;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -208,14 +210,16 @@ article {
 .tip {
   float: left;
   position: relative;
-  width: 33%;
+  width: calc(100% / 3 - 9px);
+  /* width: 33%; */
   height: auto;
   margin-right: 6px;
-  transition: transform 0.5s ease;
+  /* transition: transform 0.5s ease; */
 }
-.tip:hover {
+
+/* .tip:hover {
   transform: scale(1.1);
-}
+} */
 
 .tip:nth-child(3n) {
   margin-right: 0;
@@ -231,19 +235,20 @@ article {
   font-weight: bold;
   letter-spacing: 0.05px;
   text-align: center;
-  color: white;
   white-space: nowrap;
 }
 
 .signup {
-  position: relative;
+  /* position: relative; */
   background-image: url("bottom-background.png");
   min-height: 348px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .signup > article {
-  top: 40%;
+  text-align: center;
+  position: relative;
+  top: 40px;
 }
 .form__input_email {
   min-width: 348px;
@@ -254,6 +259,7 @@ article {
   font-weight: 600;
   letter-spacing: 0.09px;
   color: #ffffff;
+  /* text-align: center; */
 }
 
 .signup__text {
@@ -270,36 +276,31 @@ footer {
   font-weight: bold;
   letter-spacing: 0.06px;
 }
-.footer__link {
-  text-decoration: none;
-  color: #ffffff;
+
+ul {
+  list-style: none;
 }
 
-.list-container {
-  list-style: none;
+.links {
   float: right;
+  letter-spacing: 0.05px;
   font-size: 0;
 }
-.list {
-  display: inline-block;
-  font-size: 16px;
-  letter-spacing: 0.05px;
-  margin-right: 17px;
-}
-.list:nth-child(3) {
-  margin-right: 0;
-}
 
-.list__link {
-  text-decoration: none;
+.text-link {
+  font-size: 16px;
+  margin-right: 17px;
   color: #ffffff;
+}
+.text-link:nth-child(3) {
+  margin-right: 0;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .wrapper {
     padding: 20px 40px;
   }
-  .hero__head {
+  .title-lg {
     font-size: 47px;
   }
   .hero__txt {
@@ -314,6 +315,7 @@ footer {
     padding: 50px 0;
   }
   .deal {
+    width: calc(100% / 4 - 13px);
     margin-right: 17px;
   }
 
@@ -345,7 +347,7 @@ footer {
   .footer__logo {
     font-size: 18px;
   }
-  .list {
+  .text-link {
     font-size: 14px;
   }
 }
@@ -353,7 +355,7 @@ footer {
   .wrapper {
     padding: 15px 20px;
   }
-  .hero__head {
+  .title-lg {
     font-size: 35px;
   }
   .hero__txt {
@@ -365,6 +367,7 @@ footer {
   .form__button {
     font-size: 9px;
   }
+
   .deals-container {
     /* max-width: 600px;
     margin: 0 auto; */
@@ -373,6 +376,7 @@ footer {
   .deal {
     margin-right: 13px;
     margin-bottom: 20px;
+    width: calc(100% / 4 - 10px);
   }
 
   .deal__name {
@@ -390,13 +394,16 @@ footer {
   .tip {
     margin-right: 3px;
   }
-  
+
   .tip__text {
     font-size: 15px;
     top: 65%;
   }
   .form__input_email {
     min-width: 274px;
+  }
+  .signup__form_button {
+    font-size: 8px;
   }
   .signup__head {
     font-size: 34px;
@@ -408,7 +415,7 @@ footer {
   .footer__logo {
     font-size: 14px;
   }
-  .list {
+  .text-link {
     font-size: 12px;
   }
 }
