@@ -289,7 +289,7 @@ footer {
   margin-right: 17px;
   color: #ffffff;
 }
-.text-link:nth-child(3) {
+.text-link:nth-last-child(1) {
   margin-right: 0;
 }
 
