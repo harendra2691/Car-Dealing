@@ -97,6 +97,7 @@ input {
   font-size: 13px;
   letter-spacing: 0.05px;
   color: #757575;
+  outline: none;
 }
 
 .form__input_margin {
